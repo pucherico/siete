@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Five in a Row</title>
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="cinco.css">
+  </head>
+  <body>
+    <h1 align="center">Five in a row <small>just play!</small></h1>
+    <div align="center">
+      <h2>Multiplayer set up</h2>
+    </div>
+    <br/>
+    <div class="container-fluid">
+      <div class="row text-center">
+        <a id="tab-create" class="btn btn-link disabled"><i class="fa fa-plus-square-o"> Create room</i></a>
+        &nbsp;|&nbsp;
+        <a id="tab-join" class="btn btn-link"><i class="fa fa-code-fork"> Join room</i></a>
+      </div>
+      <div class="row text-center">
+        <p id="message" class="label label-warning hidden"/>
+      </div>
+      <div id="step-room">
+        <div class="row">
+          <div class="col-xs-offset-1 col-xs-10 col-sm-offset-4 col-sm-8">
+            <h2>Step 1 <small id="title-create">Create room</small><small id="title-join" class="hidden">Join room</small></h2>
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="text-center">
+            <label id="label-create">Define a room to share</label>
+            <label id="label-join" class="hidden">Join an active room</label>
+          </div>
+          <div class="text-center">
+            <input id="room-name" placeholder="Enter room name" />
+          </div>
+        </div>
+        <div id="choose-player">
+          <div class="row form-group">
+            <div class="text-center">
+              <a id="start-cross" class="btn btn-danger"><strong>X</strong></a>
+              <a id="start-circle"class="btn btn-default"><strong>O</strong></a>
+            </div>
+          </div>
+          <div class="row form-group">
+            <p id="play-cross" class="text-center">Playing as Cross</p>
+            <p id="play-circle" class="text-center hidden">Playing as Circle</p>
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="text-center">
+            <a id="new-room" class="btn btn-primary">Create room</a>
+            <a id="join-room" class="btn btn-primary hidden">Join room</a>
+            <a class="btn btn-default" href="index.html">Cancel</a>
+          </div>
+        </div>
+      </div>
+      <div id="step-wait" class="hidden">
+        <div class="col-xs-offset-1 col-xs-10 col-sm-offset-4 col-sm-8">
+          <h2>Step 2 <small>Wait partner to join room</small></h2>
+        </div>
+        <div class="row form-group">
+          <div class="text-center">
+            <a id="cancel-wait" class="btn btn-danger"><i class="fa fa-sign-out"> Leave room</i></a>
+          </div>
+        </div>
+      </div>
+      <div id="step-play" class="hidden">
+        <div class="col-xs-offset-1 col-xs-10 col-sm-offset-4 col-sm-8">
+          <h2>Last step <small>Play and win!</small></h2>
+        </div>
+        <div class="row form-group">
+          <div class="text-center">
+            <a id="go-play" class="btn btn-primary" href="index.html"><i class="fa fa-gamepad"> Go play</i></a>
+            <a id="leave-room" class="btn btn-danger"><i class="fa fa-sign-out"> Leave room</i></a>
+          </div>
+        </div>
+      </div>
+      <div id="step-back" class="hidden">
+        <div class="col-xs-offset-1 col-xs-10 col-sm-offset-4 col-sm-8">
+          <h2>Play alone <small>Enjoy by yourself!</small></h2>
+        </div>
+        <div class="row form-group">
+          <div class="text-center">
+            <a class="btn btn-primary" href="index.html"><i class="fa fa-gamepad"> Back to play</i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="application/dart" src="multiplayer.dart"></script>
+    <script src="packages/browser/dart.js"></script>
+  </body>
+</html>

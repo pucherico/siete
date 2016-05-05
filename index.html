@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Five in a Row</title>
+    <link rel="icon" href="images/icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="images/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="cinco.css">
+  </head>
+  <body>
+    <h1 align="center">Five in a row <small>just play!</small></h1>
+    <div class="container-fluid">
+      <div class="col-xs-4 text-right">
+        <a id="multiplayer" class="btn btn-link" href="multiplayer.html"><i class="fa fa-users"> Multiplayer</i></a>
+        <a id="leave-room" class="btn btn-link hidden"><i class="text-danger fa fa-sign-out"> Leave room</i></a>
+      </div>
+      <div class="col-xs-4 text-center">
+        <p id="status"/>
+      </div>
+      <div class="col-xs-4 text-left">
+        <a id="fullscreen" class="btn btn-link"><i class="fa fa-arrows-alt"> Full screen</i></a>
+      </div>
+    </div>
+    <div align="center">
+        <canvas id="canvas" width="0px" height="0px"> <!-- redimensionado en código -->
+          Canvas is not supported in your browser.
+        </canvas>
+    </div>
+    <br/>
+    <div class="container-fluid">
+      <div class="col-xs-5 col-lg-offset-1 col-lg-4 text-left">
+        <a id="start-cross" class="btn btn-danger"><strong>X</strong></a>
+        <a id="start-circle"class="btn btn-default"><strong>O</strong></a>
+      </div>
+      <div class="col-xs-2 text-center">
+        <a id="center" class="btn btn-primary"><span class="glyphicon glyphicon-map-marker"/><span class="hidden-xs"> Focus</span></a>
+      </div>
+      <div class="col-xs-5 col-lg-4 text-right">
+        <a id="autofocus-on" class="btn btn-success"><span class="glyphicon glyphicon-eye-open"/><span class="hidden-xs hidden-sm"> Autofocus ON</span></a>
+        <a id="autofocus-off" class="btn btn-success"><span class="glyphicon glyphicon-eye-close"/><span class="hidden-xs hidden-sm"> Autofocus OFF</span></a>
+        <a id="replay" class="btn btn-success hidden"><span class="glyphicon glyphicon-play"/><span class="hidden-xs hidden-sm"> Replay</span></a>
+      </div>
+    </div>
+    <script type="application/dart" src="index.dart"></script>
+    <script src="packages/browser/dart.js"></script>
+  </body>
+</html>
